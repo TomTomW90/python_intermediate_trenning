@@ -5,7 +5,7 @@ from SDA_exercises_OOP_1.movable import Movable
 class Cat(Movable, Animal):
 
     def __init__(self, name: str, sound: str = 'Meow', eaten_mauses: int = 0):
-        super().__init__(self, name, sound)
+        super().__init__(name, sound)
         self.eaten_mauses = eaten_mauses
 
     def make_sound(self) -> str:
