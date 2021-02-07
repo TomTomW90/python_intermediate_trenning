@@ -5,14 +5,11 @@ from SDA_exercises_OOP_1.dog import Dog
 
 class Vet:
 
-    @classmethod
-    def say_cat_hello(cls, cat: Cat) -> str:
+    def say_cat_hello(self, cat: Cat) -> str:
         return f'Hello, little {cat.name}!'
 
-    @classmethod
-    def say_dog_hello(cls, dog: Dog) -> str:
+    def say_dog_hello(self, dog: Dog) -> str:
         return f'Hello, brave {dog.name}!'
 
-    @classmethod
-    def say_hello(cls, animal: Animal) -> str:
+    def say_hello(self, animal: Animal) -> str:
         return f'Hello, {animal.name}'
