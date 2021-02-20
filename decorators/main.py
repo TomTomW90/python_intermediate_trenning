@@ -1,5 +1,6 @@
 # from decorators.case_2 import read_file
 # from decorators.case_3 import throw_exception_file
+from decorators.case_4 import read_does_not_exist_file
 
 
 def main():
@@ -12,6 +13,9 @@ def main():
 
     """case_3"""
     # throw_exception_file()
+
+    """case_4"""
+    read_does_not_exist_file()
 
 
 if __name__ == '__main__':
