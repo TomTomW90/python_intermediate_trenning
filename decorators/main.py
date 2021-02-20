@@ -1,4 +1,5 @@
-from decorators.case_2 import read_file
+# from decorators.case_2 import read_file
+# from decorators.case_3 import throw_exception_file
 
 
 def main():
@@ -8,6 +9,9 @@ def main():
 
     """case_2"""
     # read_file(file_path='./abc')
+
+    """case_3"""
+    # throw_exception_file()
 
 
 if __name__ == '__main__':
