@@ -4,32 +4,30 @@ def number_creator(n):
 
 
 def iterator_case_2(n):
-    print("Case_2")
     import sys
     result_list = number_creator(n)
-    print(f'Size of list in bytes: {sys.getsizeof(result_list)}')
     result = sum(result_list)
-    print(f'Size of one number in bytes: {sys.getsizeof(result)}')
     print(f'Result: {result}')
 
 
 class Iterable:
     def __init__(self, n):
         self.n = n
-        self.generated_numbers = 0
+        self.generated_number = 0
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.generated_numbers >= self.n -1:
+        if self.generated_number >= self.n:
             raise StopIteration
-        self.generated_numbers += 1
-        return self.generated_numbers
+        else:
+            self.generated_number += 1
+            return self.generated_number
 
 
 def iterator_case_3(n):
-    print("Case_2")
+    print("Case_3")
     import sys
     iterator_instance = Iterable(n)
     print(f'Size of iterator_instance in bytes: {sys.getsizeof(iterator_instance)}')
