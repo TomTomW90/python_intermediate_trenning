@@ -1,5 +1,5 @@
 def lamb_case_1():
-    list_of_names = ['Ala', 'Jola', 'Marzena', 'Jan', 'Marek']
+    list_of_names = ['Ala', 'Jola', 'Marzena', 'Jan', 'Marek', '']
     print('Case_1A')
     a_list = sorted(list_of_names, key=lambda name: len(name))
     print(list_of_names)
@@ -8,5 +8,5 @@ def lamb_case_1():
     b_list = sorted(list_of_names, key=lambda name: len(name), reverse=True)
     print(b_list)
     print('\nCase_1C')
-    c_list = sorted(list_of_names)
+    c_list = sorted(list_of_names, key=lambda name: name[0] if len(name) > 0 else '')
     print(c_list)
