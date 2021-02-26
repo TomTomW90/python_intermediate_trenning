@@ -1,7 +1,7 @@
 # from lambda_cases.case_1 import lamb_case_1
 # from lambda_cases.case_2_3 import account_manager
 # from lambda_cases.case_4 import digits_manager
-from lambda_cases.case_4 import list_sorter
+from lambda_cases.case_4_5 import list_sorter
 
 
 def main():

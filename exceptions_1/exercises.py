@@ -1,51 +1,39 @@
 def case_1():
-    # given
-    list_of_numbers = [1, 5, 8, 10, 21]
-    # when
-    print('Case_1 before')
 
-    # then; wersja pierwsza
+    list_of_numbers = [1, 5, 8, 10, 21]
+
     try:
         result = list_of_numbers[5]
+        return result
     except IndexError as ie:
         print(f'Exception cought by IndexError {ie.args}')
-    except Exception as exp:
+    except Exception as exp:  # bad practice, do not use general exception 'Exception'
         print(f'Exception cought by Exception {exp.args}')
-
-    print('Case_1 after')
-
-    # then; wersja druga
-    try:
-        result = list_of_numbers[5]
-    except (IndexError, Exception) as e:
-        print(f'Exception cought by touple of (IndexError, Exception) {e.args}')
 
 
 def case_2(name: str):
     if len(name) == 0:
         raise ValueError('String is empty.')
-    print(f"Given name is: {name}")
+    print(name)
 
 
 def case_3(number: int, divisor: int):
     try:
         return number / divisor
-    except ZeroDivisionError:
-        print(f'Given divisor should not be 0')
+    except ZeroDivisionError as zde:
+        print(f'Given divisor should not be 0 {zde.args}')
         return 0
 
 
-def case_4(dictionary: dict, key: str):
+def case_4(dict_of_lists: dict, list_to_be_printed: str):
     try:
-        items: list = dictionary[key]
-        for item in items:
-            print(item)
-    except KeyError as ke:
-        print(f'Key {ke.args} not found.')
+        print(dict_of_lists[list_to_be_printed])
+    except KeyError:
+        print(f'Key representing list: "{list_to_be_printed}" not found.')
 
 
 def case_6():
-    raise NotImplementedError(f'Solved in the future')
+    raise NotImplementedError(f'To be solved in the future')
 
 
 def case_7():
@@ -56,7 +44,7 @@ def case_7():
         print(f'Eception cought, {ioe.args}')
     finally:
         if fd:
-            print('File descriptor closin.')
+            print('File descriptor closing.')
             fd.close()
 
 

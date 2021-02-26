@@ -4,3 +4,4 @@ __pycache__/
 venv/
 questions.py
 data.pickle
+data.csv

@@ -4,22 +4,22 @@ def number_creator(n):
 
 
 def iterator_case_2(n):
-    import sys
     result_list = number_creator(n)
     result = sum(result_list)
     print(f'Result: {result}')
+    return result
 
 
 class Iterable:
-    def __init__(self, n):
-        self.n = n
+    def __init__(self, stop_iteration_at):
+        self.stop_iteration_at = stop_iteration_at
         self.generated_number = 0
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.generated_number >= self.n:
+        if self.generated_number >= self.stop_iteration_at:
             raise StopIteration
         else:
             self.generated_number += 1
