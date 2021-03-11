@@ -4,15 +4,25 @@ return the only number in the range that is missing from the array.
 """
 
 
-def find_missing_number(nums_list: list) -> int:
-    sollution = None
-    for number in range(0, len(nums_list) + 1):
-        if number not in nums_list:
-            sollution = number
-            break
-    return sollution
+def find_missing_number(nums: list) -> int:
+    nums.sort()
+    n = 0
+    while n == nums[n]:
+        n += 1
+        if n == len(nums):
+            return nums[-1] + 1
+    return nums[n] - 1
 
 
-def missing_number(nums: list) -> int:
-    a_data = sorted(nums)
-    b_data = range
+if __name__ == '__main__':
+    list_of_nums = [3, 0, 1]
+    print(find_missing_number(list_of_nums))
+
+    list_of_nums = [0, 1]
+    print(find_missing_number(list_of_nums))
+
+    list_of_nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+    print(find_missing_number(list_of_nums))
+
+    list_of_nums = [0]
+    print(find_missing_number(list_of_nums))

@@ -2,6 +2,8 @@ from typing import List, Optional
 
 
 def binary_search(items: List[int], target: int) -> Optional[int]:
+    """Do binary search on list to return desired value performing 0(n) algorithm."""
+
     left, right = 0, len(items) - 1
     while left <= right:
         middle = left + (right - left) // 2  # to samo co (right + left) // 2
@@ -16,6 +18,6 @@ def binary_search(items: List[int], target: int) -> Optional[int]:
 if __name__ == '__main__':
     data = list(range(12))
     print(data)
-    # assert binary_search(data, 1001) is None
-    # assert binary_search(data, 10) == 10
+    assert binary_search(data, 1001) is None
+    assert binary_search(data, 10) == 10
     print(binary_search(data, 8))
