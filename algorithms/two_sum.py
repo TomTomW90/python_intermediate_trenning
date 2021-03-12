@@ -8,6 +8,8 @@ from typing import List, Tuple
 
 
 def find_two_numbers_that_add(nums_list: list, target_sum: int) -> list:
+    """My first sollution."""
+
     sollution = []
     for element in nums_list:
         wanted_element = target_sum - element
@@ -24,6 +26,8 @@ def find_two_numbers_that_add(nums_list: list, target_sum: int) -> list:
 
 
 def two_sum(nums: List[int], target: int) -> Tuple[int, int]:
+    """The best sollution."""
+
     i, j = 0, len(nums) - 1
     data = sorted(nums)
     while i < j:
@@ -40,3 +44,9 @@ def two_sum(nums: List[int], target: int) -> Tuple[int, int]:
     else:
         idx2 = nums.index(data[j])
     return idx1, idx2
+
+
+if __name__ == "__main__":
+    print(two_sum([2, 7, 11, 15], 9))
+    print(two_sum([3, 2, 4], 6))
+    print(two_sum([3, 3], 6))
