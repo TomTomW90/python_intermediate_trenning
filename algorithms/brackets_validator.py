@@ -13,7 +13,7 @@ def validate_brackets(sequence: str) -> bool:
 
 
 if __name__ == '__main__':
-    assert validate_brackets('((()))') is True
-    assert validate_brackets('()()()') is True
-    assert validate_brackets(')))(((') is True  # this might be a problem, check other sollution
-    assert validate_brackets('((())') is False
+    assert validate('((()))') is True
+    assert validate('()()()') is True
+    assert validate(')))(((') is False  # this might be a problem, check other sollution
+    assert validate('((())') is False

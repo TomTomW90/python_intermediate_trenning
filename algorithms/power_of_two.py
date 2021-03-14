@@ -19,21 +19,8 @@ def power_of_two_v2(n: int) -> bool:
     return False
 
 
-
-def power_of_two_v3(n: int) -> bool:
-    v = 1
-    if n in [1, 2]:
-        return True
-    while n ** (1/v) > 2:
-        v += 1
-        if n ** (1/v) == 2:
-            return True
-        # if n ** (1 / v) == 1:
-        #     return True
-    return False
-
 if __name__ == "__main__":
-    print(power_of_two_v3(1))
-    print(power_of_two_v3(2))
-    print(power_of_two_v3(3))
-    print(power_of_two_v3(4))
+    print(power_of_two_v2(1))
+    print(power_of_two_v2(2))
+    print(power_of_two_v2(3))
+    print(power_of_two_v2(4))
